@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title List of users
+  body
+    div.form-row
+      div.col.form-group.col-md-9    
+        form.search(action='/userlist')
+          div.form-row
+            div.col-md-8
+              input.form-control(name='nationality' placeholder="Enter your search term ...")
+            div.col-md-4
+              input.btn.btn-dark.btn-block(type="submit")
+    table
+      thead
+        tr
+          th first_name
+          th last_name
+          th date_today
+          th nationality
+          th birthday
+          th gender
+          th email
+          th telNo
+          th nin
+      tbody
+        each user in users
+          tr
+
+            td #{user.first_name}
+            td #{user.last_name}
+            td #{user.date_today}
+            td #{user.nationality}
+            td #{user.birthday}
+            td #{user.gender}
+            td #{user.email}
+            td #{user.telno}
+            td #{user.nin}
+            
+
