@@ -181,7 +181,6 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  
   background-color: #ebebeb;
 }
 
@@ -191,6 +190,7 @@ iframe {
   background: #fff;
   border-radius: 10px;
   position: relative;
+  padding: 30px;
 }
 
 

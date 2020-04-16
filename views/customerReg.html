@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="RegistrationForm">
     <meta name="author" content="Babirye Grace">
     <meta name="keywords" content="babiryegrace20">
@@ -30,7 +30,22 @@
     <!--<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">-->
             <div class="card card-4">
-                <div w3-include-html="./views/header.html"></div>
+                <div class="container-fluid" id="div1" style="position: fixed; top: 0px; width: 2090px;">
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#" class="dropbtn">Log In</a>
+                        <div class="dropdown-content">
+                          <a href="adminLogin.html">Administrator</a>
+                          <a href="salesLogin.html">Sales Executive</a>
+                        </div>
+                      </li>
+                      <li><a href="#news">Sales</a></li>
+                      <li><a href="#contact">statistics</a></li>
+                      <li><a class="active" href="#about">Log Out</a></li>
+                    </ul>
+                    </div>
+              
+                <!--<div w3-include-html="./views/header.html"></div>-->
                 <div class="card-body">
                     <img src="images/logo.PNG" alt="" style="margin-left: 500px; max-width: 60px;">
                     <h2 class="title">Customer Registration Form</h2>
@@ -40,13 +55,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" name="first_name" id="name" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" name="last_name" id="name" required>
                                 </div>
                             </div>
                         <!--</div>-->
@@ -55,7 +70,7 @@
                               <div class="input-group">
                                   <label class="label">Current Date</label>
                                   <div class="input-group-icon">
-                                      <input class="input--style-4 js-datepicker" type="text" name="date_today">
+                                      <input class="input--style-4 js-datepicker" type="text" name="date_today" id="date" required>
                                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                   </div>
                               </div>
@@ -63,7 +78,7 @@
                           <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Nationality</label>
-                                <input class="input--style-4" type="text" name="nationality">
+                                <input class="input--style-4" type="text" name="nationality" id="nationality" required>
                             </div>
                         </div>
                       </div>
@@ -72,7 +87,7 @@
                                 <div class="input-group">
                                     <label class="label">Customer DOB</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" name="birthday" id="dob" required>
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -82,11 +97,11 @@
                                     <label class="label">Gender</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" checked="checked" name="gender" id="gender" required>
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="gender" id="gender" required>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -97,13 +112,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" name="email" id="email" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="telno">
+                                    <input class="input--style-4" type="text" name="telno" id="phonenumber" required>
                                 </div>
                             </div>
                             </div>
@@ -111,14 +126,14 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">NiN</label>
-                                    <input class="input--style-4" type="text" name="nin">
+                                    <input class="input--style-4" type="text" name="nin" id="nin" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Marital Status</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
+                                        <select name="subject" id="status">
                                             <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>Married</option>
                                             <option>Not married</option>
@@ -132,14 +147,14 @@
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label">Down Payment</label>
-                                  <input class="input--style-4" type="text" name="downpayment">
+                                  <input class="input--style-4" type="text" name="downpayment" id="downpayment" required>
                               </div>
                           </div>
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label">Kind of vehicle</label>
                                   <div class="rs-select2 js-select-simple select--no-search">
-                                      <select name="subject">
+                                      <select name="subject" id="vehicle" required>
                                           <option disabled="disabled" selected="selected">Choose option</option>
                                           <option>Boda boda</option>
                                           <option>Tuktuk</option>
@@ -155,13 +170,13 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Stage name</label>
-                                <input class="input--style-4" type="text" name="stage_name">
+                                <input class="input--style-4" type="text" name="stage_name" id="stagename" required>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Other loans(if any)</label>
-                                <input class="input--style-4" type="text" name="other_loan">
+                                <input class="input--style-4" type="text" name="other_loan" id="loans" required>
                             </div>
                         </div>
                     <!--</div>
@@ -169,13 +184,13 @@
                       <div class="col-2">
                           <div class="input-group">
                               <label class="label">referee name</label>
-                              <input class="input--style-4" type="text" name="referee_name">
+                              <input class="input--style-4" type="text" name="referee_name" id="name" required>
                           </div>
                       </div>
                       <div class="col-2">
                           <div class="input-group">
                               <label class="label">work of referee</label>
-                              <input class="input--style-4" type="text" name="referee_work">
+                              <input class="input--style-4" type="text" name="referee_work" id="name" required>
                           </div>
                       </div>
                   </div>
@@ -183,14 +198,14 @@
                     <div class="col-2">
                       <div class="input-group">
                           <label class="label">Referee Phone Number</label>
-                          <input class="input--style-4" type="text" name="phone">
+                          <input class="input--style-4" type="text" name="phone" id="phonenumber" required>
                       </div>
                   </div>
                   <div class="col-2">
                     <div class="input-group">
                         <label class="label">Referee DOB</label>
                         <div class="input-group-icon">
-                            <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                            <input class="input--style-4 js-datepicker" type="text" name="birthday" id="dob" required>
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                     </div>
@@ -198,35 +213,73 @@
                   <div class="col-2">
                     <div class="input-group">
                         <label class="label">Next of Kin Name</label>
-                        <input class="input--style-4" type="text" name="NOK">
+                        <input class="input--style-4" type="text" name="NOK" id="name" required>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="input-group">
                         <label class="label">Next of Kin contact</label>
-                        <input class="input--style-4" type="text" name="phone">
+                        <input class="input--style-4" type="text" name="phone" id="phonenumber" required>
                     </div>
                 </div>
                     </div>
-                    <div>
+                    <div class="row row-space">
+                    <div class="col-2">
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload lc3 recommendation</span>
                       </div>
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                        <!--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
                       </div>
                     </div>
                     </div>
-                </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit" style="margin-left: 300px;">Submit</button>
-                            <button class="btn btn--radius-2 btn--red" type="submit" style="margin-left: 80px;">Cancel</button>
+                    <div class="col-2">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload lc1 recommendation</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                            <!--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+                          </div>
                         </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload referee recommendation</span>
+                              </div>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                                <!--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+                              </div>
+                            </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload stage recommendation</span>
+                                  </div>
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                                    <!--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+                                  </div>
+                                </div>
+                                </div>
+                </div>
+                      <div style="padding-bottom: 80px;">
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" style="margin-left: 300px;" onclick="validate()">Submit</button>
+                            <button class="btn btn--radius-2 btn--red" type="reset" style="margin-left: 80px;">Cancel</button>
+                        </div>
+                      </div>
                     </form>
                 </div>
-                <div w3-include-html="./views/footer.html"></div>
+                <div class="container-fluid" id="div2" style="background-color: #2489C7; width: 2090px; position: fixed; bottom: 0px; height: 50px;">
+                    <p style="padding-left: 500px; margin: 10px; color: aliceblue;">Designed by BABIRYE GRACE<br> BodabodaBanja&copy2020</p>
+                  </div>
             </div>
         <!--</div>
     </div>-->
@@ -240,8 +293,9 @@
     <script src="/vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
-    <script src="/js/global.js"></script>
     <script src="/js/include.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/validation.js"></script>
 </body>
 </html>
 <!-- end document-->

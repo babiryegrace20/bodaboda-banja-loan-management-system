@@ -25,12 +25,26 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/css/1.css">
+	<link rel="stylesheet" href="/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div w3-include-html="./views/header.html"></div>
+		<div class="container-fluid" id="div1" style="position: fixed; top: 0px; width: 2090px;">
+			<ul>
+				<li class="dropdown">
+					<a href="#" class="dropbtn">Log In</a>
+					<div class="dropdown-content">
+						<a href="adminLogin.html">Administrator</a>
+						<a href="salesLogin.html">Sales Executive</a>
+					</div>
+				</li>
+				<li><a href="#news">Sales</a></li>
+				<li><a href="#contact">statistics</a></li>
+				<li><a class="active" href="#about">Log Out</a></li>
+			</ul>
+			</div>
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
 				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="/executiveRegistration">
@@ -83,7 +97,9 @@
 		</div>
 	</div>
 	
-	<div w3-include-html="./views/footer.html"></div>
+	<div class="container-fluid" id="div2" style="background-color: #2489C7; width: 2090px; position: fixed; bottom: 0px; height: 50px;">
+		<p style="padding-left: 500px; margin: 10px; color: aliceblue;">Designed by BABIRYE GRACE<br> BodabodaBanja&copy2020</p>
+	</div>
 	<div id="dropDownSelect1"></div>
 
 	<script src="/js/jquery-3.4.1.js"></script>
@@ -102,8 +118,9 @@
 <!--===============================================================================================-->
 	<script src="/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="/js/main.js"></script>
-	<script src="/js/include.js"></script>
+
+<script src="/js/include.js"></script>
+<script src="/js/main.js"></script>	
 
 </body>
 </html>
