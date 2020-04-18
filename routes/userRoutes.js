@@ -19,34 +19,6 @@ router.post('/executiveRegistration', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', 'customerReg.html'));
   })
 
-/**router.post('/salesexec', async(req, res)=> {
-  try{
-    //should include if code to check if its the first time of login or already exists
-     var myData = new User(req.body)
-     await myData.save()
-     console.log('login successful')
-     res.redirect('/customerReg.html')
-
-  }
-  catch (error){
-  res.status(400).send("unable to save to direct to customer registration") 
-
-  }
-})
-
-//another route to access the salesExecutive list
-router.get('/salesExecutiveList',async(req, res) => {
-  try {
-    let salesexecs = await Executive.find()
-    res.render('executives', { executives: salesexecs })
-  } catch (err) {
-    res.status(400).send("unable to find sales executive list");
-  }
-})
-**/
-/**router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views', 'salesLogin.html'));
-})**/
 
 router.post('/addname', async(req, res)=> {
 try{
