@@ -1,10 +1,5 @@
 const mongoose = require("mongoose")
 
-/**var executiveSchema = new mongoose.Schema({
-  username: String,
-  pass: String,
- })**/
-
 var nameSchema = new mongoose.Schema({
   first_name: String,
   last_name: String,
@@ -14,11 +9,22 @@ var nameSchema = new mongoose.Schema({
    gender: String,
    email: String,
    telno: String,
-   nin: String
+   nin: String,
+   downpayment: String,
+   subject: String,
+   stage_name: String,
+   other_loan: String,
+   referee_name: String,
+   referee_work: String,
+   telno2: String,
+   birthday: Date,
+   NOK: String,
+   telno3: String,
+   
+
+
  })
 
-//var Executive = mongoose.model("Executive", executiveSchema)
 var User = mongoose.model("User", nameSchema)
 
 module.exports = mongoose.model("User",nameSchema)
-//module.exports = mongoose.model("Executive",executiveSchema)

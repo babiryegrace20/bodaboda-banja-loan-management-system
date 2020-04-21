@@ -50,12 +50,12 @@
                     <img src="images/logo.PNG" alt="" style="margin-left: 500px; max-width: 60px;">
                     <h2 class="title">Customer Registration Form</h2>
                     
-                    <form method="POST" action="/addname">
+                    <form name="form" method="POST" action="/addname">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name" id="name" required>
+                                    <input class="input--style-4" type="text" name="first_name" id="name"  required>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -70,7 +70,7 @@
                               <div class="input-group">
                                   <label class="label">Current Date</label>
                                   <div class="input-group-icon">
-                                      <input class="input--style-4 js-datepicker" type="text" name="date_today" id="date" required>
+                                      <input class="input--style-4 js-datepicker" type="text" name="date_today" id="dob" required>
                                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                   </div>
                               </div>
@@ -112,7 +112,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email" id="email" required>
+                                    <input class="input--style-4" type="email" name="email" id="email"required>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -147,7 +147,7 @@
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label">Down Payment</label>
-                                  <input class="input--style-4" type="text" name="downpayment" id="downpayment" required>
+                                  <input class="input--style-4" type="text" name="downpayment" id="downpayment"  required>
                               </div>
                           </div>
                           <div class="col-2">
@@ -176,7 +176,7 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Other loans(if any)</label>
-                                <input class="input--style-4" type="text" name="other_loan" id="loans" required>
+                                <input class="input--style-4" type="text" name="other_loan"  required>
                             </div>
                         </div>
                     <!--</div>
@@ -184,7 +184,7 @@
                       <div class="col-2">
                           <div class="input-group">
                               <label class="label">referee name</label>
-                              <input class="input--style-4" type="text" name="referee_name" id="name" required>
+                              <input class="input--style-4" type="text" name="referee_name" id="name"  required>
                           </div>
                       </div>
                       <div class="col-2">
@@ -198,7 +198,7 @@
                     <div class="col-2">
                       <div class="input-group">
                           <label class="label">Referee Phone Number</label>
-                          <input class="input--style-4" type="text" name="phone" id="phonenumber" required>
+                          <input class="input--style-4" type="text" name="telno2" id="phonenumber" required>
                       </div>
                   </div>
                   <div class="col-2">
@@ -219,7 +219,7 @@
                 <div class="col-2">
                     <div class="input-group">
                         <label class="label">Next of Kin contact</label>
-                        <input class="input--style-4" type="text" name="phone" id="phonenumber" required>
+                        <input class="input--style-4" type="text" name="telno3" id="phonenumber" required>
                     </div>
                 </div>
                     </div>
