@@ -117,3 +117,89 @@
 
   }
   //validate()
+  /**function validate()
+  {
+
+    var firstname = document.form.first_name
+    var lastname = document.form.last_name
+    var datetoday    = document.form.date_today
+    var nation = document.form.nationality
+    var birth = document.form.birthday
+    var sex = document.form.gender
+    var emails  = document.form.email
+    var phoneno = document.form.telno
+    var niN = document.form.nin
+    var downpay = document.form.downpayment
+    var vehicle = document.form.subject
+    var stage = document.form.stage_name
+    var loan = document.form.other_loan
+    var refname = document.form.referee_name
+    var refwork = document.form.referee_work
+    
+
+    function alphabet()
+  {
+    /**declaring a variable letter that stores the regular expression that 
+    will be matched against**/
+    var letter = /^[A-Za-z]+$/
+    if (firstname.value.match(letter))
+    {
+      document.getElementById('name').style.border = "2px solid green";
+      return true
+    }
+    else
+    {
+      alert("Value should not be numeric")
+      firstname.focus()
+      document.getElementById('name').style.border = "2px solid red";
+      return false
+    }
+  }
+      var tel =(phoneno) =>{
+        if(phoneno.value.length==0 || phoneno.value.length!=10)
+        {
+          alert("Invalid phone number")
+          phoneno.focus()
+          document.getElementById('phonenumber').style.border = "2px solid red";
+          return false
+        }
+        else
+        {
+          document.getElementById('phonenumber').style.border = "2px solid green";
+          return true
+        }
+      }
+
+
+
+  var alphanumeric =(downpay)=>{
+
+    var payment = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (downpay.value.match(payment))
+    {
+      document.getElementById('downpayment').style.border = "2px solid green";
+      return true
+    }
+    else
+    {
+      alert("Value should be alphanumeric")
+      downpay.focus()
+      document.getElementById('downpayment').style.border = "2px solid red";
+      return false
+    }
+  }
+
+  if(alphabet())
+  {
+
+  } 
+  if(tel(phoneno))
+  {
+
+  }
+  
+  if(alphanumeric(downpay, payment))
+  {
+
+  }
+  }**/

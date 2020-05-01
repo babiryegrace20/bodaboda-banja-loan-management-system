@@ -50,18 +50,18 @@
                     <img src="images/logo.PNG" alt="" style="margin-left: 500px; max-width: 60px;">
                     <h2 class="title">Customer Registration Form</h2>
                     
-                    <form name="form" method="POST" action="/addname">
+                    <form name="form" method="POST" action="/addname" onsubmit="return customerValidation();">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name" id="name"  required>
+                                    <input class="input--style-4" type="text" name="first_name" id="first_name"  required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name" id="name" required>
+                                    <input class="input--style-4" type="text" name="last_name" id="last_name" required>
                                 </div>
                             </div>
                         <!--</div>-->
@@ -70,7 +70,7 @@
                               <div class="input-group">
                                   <label class="label">Current Date</label>
                                   <div class="input-group-icon">
-                                      <input class="input--style-4 js-datepicker" type="text" name="date_today" id="dob" required>
+                                      <input class="input--style-4 js-datepicker" type="text" name="date_today" id="date_today" required>
                                       <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                   </div>
                               </div>
@@ -87,7 +87,7 @@
                                 <div class="input-group">
                                     <label class="label">Customer DOB</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday" id="dob" required>
+                                        <input class="input--style-4 js-datepicker" type="text" name="birthday" id="birthday" required>
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="telno" id="phonenumber" required>
+                                    <input class="input--style-4" type="text" name="telno" id="telno" required>
                                 </div>
                             </div>
                             </div>
@@ -154,7 +154,7 @@
                               <div class="input-group">
                                   <label class="label">Kind of vehicle</label>
                                   <div class="rs-select2 js-select-simple select--no-search">
-                                      <select name="subject" id="vehicle" required>
+                                      <select name="subject" id="subject" required>
                                           <option disabled="disabled" selected="selected">Choose option</option>
                                           <option>Boda boda</option>
                                           <option>Tuktuk</option>
@@ -170,13 +170,13 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Stage name</label>
-                                <input class="input--style-4" type="text" name="stage_name" id="stagename" required>
+                                <input class="input--style-4" type="text" name="stage_name" id="stage_name" required>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Other loans(if any)</label>
-                                <input class="input--style-4" type="text" name="other_loan"  required>
+                                <input class="input--style-4" type="text" name="other_loan" id="other_loan" required>
                             </div>
                         </div>
                     <!--</div>
@@ -184,13 +184,13 @@
                       <div class="col-2">
                           <div class="input-group">
                               <label class="label">referee name</label>
-                              <input class="input--style-4" type="text" name="referee_name" id="name"  required>
+                              <input class="input--style-4" type="text" name="referee_name" id="referee_name"  required>
                           </div>
                       </div>
                       <div class="col-2">
                           <div class="input-group">
                               <label class="label">work of referee</label>
-                              <input class="input--style-4" type="text" name="referee_work" id="name" required>
+                              <input class="input--style-4" type="text" name="referee_work" id="referee_work" required>
                           </div>
                       </div>
                   </div>
@@ -198,14 +198,14 @@
                     <div class="col-2">
                       <div class="input-group">
                           <label class="label">Referee Phone Number</label>
-                          <input class="input--style-4" type="text" name="telno2" id="phonenumber" required>
+                          <input class="input--style-4" type="text" name="telno2" id="telno" required>
                       </div>
                   </div>
                   <div class="col-2">
                     <div class="input-group">
                         <label class="label">Referee DOB</label>
                         <div class="input-group-icon">
-                            <input class="input--style-4 js-datepicker" type="text" name="birthday" id="dob" required>
+                            <input class="input--style-4 js-datepicker" type="text" name="birthday" id="birthday" required>
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                     </div>
@@ -213,13 +213,13 @@
                   <div class="col-2">
                     <div class="input-group">
                         <label class="label">Next of Kin Name</label>
-                        <input class="input--style-4" type="text" name="NOK" id="name" required>
+                        <input class="input--style-4" type="text" name="NOK" id="NOK" required>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="input-group">
                         <label class="label">Next of Kin contact</label>
-                        <input class="input--style-4" type="text" name="telno3" id="phonenumber" required>
+                        <input class="input--style-4" type="text" name="telno3" id="telno" required>
                     </div>
                 </div>
                     </div>
@@ -271,7 +271,7 @@
                 </div>
                       <div style="padding-bottom: 80px;">
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit" style="margin-left: 300px;" onclick="validate()">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" type="submit" style="margin-left: 300px;">Submit</button>
                             <button class="btn btn--radius-2 btn--red" type="reset" style="margin-left: 80px;">Cancel</button>
                         </div>
                       </div>
@@ -293,9 +293,9 @@
     <script src="/vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
+    <script src="/js/customerReg.js"></script>
     <script src="/js/include.js"></script>
     <script src="/js/global.js"></script>
-    <script src="/js/validation.js"></script>
 </body>
 </html>
 <!-- end document-->

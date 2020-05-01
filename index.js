@@ -10,6 +10,7 @@ server.use(express.static('public'))
 
 server.use('/', userRoutes)
 server.set('view engine', 'pug')
+server.set(bodyParser.json())
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: true }))
 
