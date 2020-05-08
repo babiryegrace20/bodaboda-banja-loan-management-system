@@ -1,29 +1,25 @@
 function formValidation(){
-  var firstName = document.registration.firstName;
-  var lastName = document.registration.lastName;
-  var dob = document.registration.dob;
-  var contact = document.registration.contact;
-  var email = document.registration.email;
-  var id = document.registration.id;
-  var password = document.registration.password;
-  var workingDaysNum = document.registration.workingDaysNum;
-  var supervisor = document.registration.supervisor;
-  var todayDate = document.registration.todayDate;
+  var first_name = document.executive.first_name;
+  var last_name = document.executive.last_name;
+  var current_date = document.executive.current_date;
+  var phonenumber = document.executive.phonenumber;
+  var email = document.executive.email;
+  var id = document.executive.id;
+  var password = document.executive.password;
+  var supervisor = document.executive.supervisor;
+  var workingdays = document.executive.workingdays;
   
   
-  if(validatefirstName(firstName)){
-      if(validatelastName(lastName)){
-          if(validateDob(dob)){
-              if(validateContact(contact)){
+  if(validatefirstName(first_name)){
+      if(validatelastName(last_name)){
+          if(validateDate(current_date)){
+              if(validateContact(phonenumber)){
                   if(validateEmail(email)){
                       if(validateId(id,5,35)){
                           if(validatePassword(password,6,12)){                              
-                                  if(validateWorkingDays(workingDaysNum)){
                                       if(validateSupervisor(supervisor)){
-                                          if(validateTodayDate(todayDate)){
+                                        if(validateWorkingDays(workingdays)){
                                             form.submit();
-
-                                          }
 
                                       }
                                   }                         
@@ -41,63 +37,43 @@ function formValidation(){
 function validatefirstName(name){
   var letters = /^[A-Za-z]+$/;
   if(name.value.match(letters)){
-      return true;
+    first_name.style.border = "2px solid green";
+    return true;
   }
   else {
-      firstName.style.border = "2px solid red";
-      document.getElementById('firstName_div').style.color = "red";
-      firstName_error.textContent = "First name is required";
-      firstName.focus();
-      firstName.addEventListener('blur', () =>{
-          document.getElementById('firstName_div').style.color = "";
-          firstName_error.textContent = "";
-          firstName.style.border = "";
-         
-      })
-    
-      return false;
-  }   
-}
+    first_name.style.border = "2px solid red";
+    alert('non-alphabets are not allowed');
+    first_name.focus();
+    return false;
+    }
+  }
 
 //Validate last name
 function validatelastName(name){
   var letters = /^[A-Za-z]+$/;
   if(name.value.match(letters)){
-      return true;
+    last_name.style.border = "2px solid green";
+    return true;
   }
   else {
-      lastName.style.border = "2px solid red";
-      document.getElementById('lastName_div').style.color = "red";
-      lastName_error.textContent = "Last name is required";
+      last_name.style.border = "2px solid red";
+      alert('non-alphabets are not allowed');
       lastName.focus();
-      lastName.addEventListener('blur', () =>{
-        document.getElementById('lastName_div').style.color = "";
-        lastName_error.textContent = "";
-        lastName.style.border = "";
-       
-    })
-  
       return false;
-  }   
-}
+    }
+  
+      
+  }
 
 //Validate Date of Birth
-function validateDob(date){
+function validateDate(date){
   if(date.value != ""){
     return true;
   }
   else {
-      dob.style.border = "2px solid red";
-      document.getElementById('dob_div').style.color = "red";
-      dob_error.textContent = "Date of birth is required";
-      dob.focus();
-      dob.addEventListener('blur', () =>{
-        document.getElementById('dob_div').style.color = "";
-        dob_error.textContent = "";
-        dob.style.border = "";
-       
-    })
-  
+      current_date.style.border = "2px solid red";
+      alert('date is required');
+      current_date.focus();
       return false;
 
   }
@@ -107,20 +83,12 @@ function validateDob(date){
 function validateContact(a){
   var numbers = /^[0-9]+$/;
   if(a.value.match(numbers)){
-      return true;
+     return true;
   }
   else {
-    contact.style.border = "2px solid red";
-    document.getElementById('contact_div').style.color = "red";
-    contact_error.textContent = "Contact is required";
+    phonenumber.style.border = "2px solid red";
+    alert('contact is required');
     contact.focus();
-    contact.addEventListener('blur', () =>{
-        document.getElementById('contact_div').style.color = "";
-        contact_error.textContent = "";
-        contact.style.border = "";
-       
-    })
-  
     return false;
   }
 }
@@ -132,18 +100,10 @@ function validateEmail(uemail){
         return true;
     } 
     else {
-    email.style.border = "2px solid red";
-    document.getElementById('email_div').style.color = "red";
-    email_error.textContent = "Enter correct email";
-    email.focus();
-    email.addEventListener('blur', () =>{
-        document.getElementById('email_div').style.color = "";
-        email_error.textContent = "";
-        email.style.border = "";
-       
-    })
-  
-    return false;
+        email.style.border = "2px solid red";
+        alert('enter valid email');
+        email.focus();
+        return false;
     }
 } 
 
@@ -152,17 +112,8 @@ function validateId(uid,mx,my){
     var uid_len = uid.value.length;
     if (uid_len == 0 || uid_len >= my || uid_len < mx){
         id.style.border = "2px solid red";
-        document.getElementById('id_div').style.color = "red";
-        id_error.textContent = "ID must have 5-35 characters";
+        alert('id should be between 5 and 35 characters');
         id.focus();
-        id.addEventListener('blur', () =>{
-            document.getElementById('id_div').style.color = "";
-            id_error.textContent = "";
-            id.style.border = "";
-           
-        })
-      
-        
         return false;
    
     }
@@ -174,16 +125,8 @@ function validatePassword(pass,mx,my){
     var pass_len = pass.value.length;
     if (pass_len == 0 || pass_len >= my || pass_len < mx) {
         password.style.border = "2px solid red";
-        document.getElementById('password_div').style.color = "red";
-        password_error.textContent = "Password must have 6-12 characters";
+        alert("Password must have 6-12 characters");
         password.focus();
-        password.addEventListener('blur', () =>{
-            document.getElementById('password_div').style.color = "";
-            password_error.textContent = "";
-            password.style.border = "";
-           
-        })
-      
         return false;
     }
     return true
@@ -197,16 +140,8 @@ function validateWorkingDays(a){
     }
     else {
       workingDaysNum.style.border = "2px solid red";
-      document.getElementById('workingDaysNum_div').style.color = "red";
-      workingDaysNum_error.textContent = "This field is required";
-      workingDaysNum.focus();
-      workingDaysNum.addEventListener('blur', () =>{
-        document.getElementById('workingDaysNum_div').style.color = "";
-        workingDaysNum_error.textContent = "";
-        workingDaysNum.style.border = "";
-       
-    })
-  
+      alert("This field is required");
+      workingdays.focus();
       return false;
     }
 }
@@ -219,23 +154,14 @@ function validateSupervisor(name){
     }
     else {
         supervisor.style.border = "2px solid red";
-        document.getElementById('supervisor_div').style.color = "red";
-        supervisor_error.textContent = "Supervisor name is required";
+        alert("Supervisor name is required");
         supervisor.focus();
-        supervisor.addEventListener('blur', () =>{
-            document.getElementById('supervisor_div').style.color = "";
-            supervisor_error.textContent = "";
-            supervisor.style.border = "";
-           
-        })
-      
-      
         return false;
     }   
 }
 
 //Validate current date
-function validateTodayDate(date){
+/**function validateTodayDate(date){
     if(date.value != ""){
         alert('Form Succesfully Submitted');
         return true;
@@ -256,5 +182,5 @@ function validateTodayDate(date){
         return false;
   
     }
-}  
+}  **/
   

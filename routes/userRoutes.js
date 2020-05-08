@@ -24,7 +24,7 @@ router.post('/addname', async(req, res)=> {
 try{
    var myData = new User(req.body)
    await myData.save()
-   console.log(req.body)
+   //console.log(req.body)
    console.log('Item has been saved')
    res.redirect('/userlist')
 
