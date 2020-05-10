@@ -7,7 +7,7 @@
       }else{
           document.getElementById('name').style.border = "2px solid green";
       }
-      if (/^[0-9]+$/.test(document.getElementById("name").value)) {
+      if (/^[A-Za-z]+$/.test(document.getElementById("name").value)) {
           alert("enter alphabets only!!");
           document.getElementById('name').style.border = "2px solid red";
           return false;
